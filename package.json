@@ -1,7 +1,15 @@
 {
     "scripts": {
-        "start": "parcel src/index.html",
-        "build": "parcel build src/index.html"
+        "start": "npm run dev:dev",
+        "dev:dev": "TASTEFUL_ENV=dev parcel src/index.html",
+        "dev:staging": "TASTEFUL_ENV=staging parcel src/index.html",
+        "dev:prod": "TASTEFUL_ENV=prod parcel src/index.html",
+        "build": "npm run build:prod",
+        "build:prod": "TASTEFUL_ENV=prod parcel build src/index.html",
+        "build:staging": "TASTEFUL_ENV=staging parcel build src/index.html"
+    },
+    "alias": {
+        "@env": "./environments"
     },
     "dependencies": {
         "react": "^16.5.2",
