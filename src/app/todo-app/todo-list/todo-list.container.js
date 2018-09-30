@@ -7,7 +7,6 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = {
-    addTodo: actions.todoListActions.AddTodo,
     toggleTodo: actions.todoListActions.ToggleTodo
 };
 
