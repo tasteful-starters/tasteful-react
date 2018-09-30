@@ -1,7 +1,9 @@
 import React from "react";
+import { Route } from 'react-router-dom';
 
-import TodoList from './todo-list';
-import TodoAdder from './todo-adder';
+import TodoList from './shared/todo-list';
+import TodoAdder from './shared/todo-adder';
+import TodoView from './todo-view';
 
 const TodoApp = () => (
     <div>
@@ -10,6 +12,8 @@ const TodoApp = () => (
         <TodoAdder />
 
         <TodoList />
+
+        <Route path="/todo/:id" component={TodoView}/>
     </div>
 );
 
